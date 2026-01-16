@@ -2,34 +2,48 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
-<title>Noticias</title>
-<meta name="description" content="Web de noticias optimizada y eficiente">
+<title>Noticias Optimizada</title>
+<meta name="description" content="Web de noticias optimizada con ecodiseño digital">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
 <header class="header">
   <h1>Noticias</h1>
 </header>
 
 <main class="content">
+
   <section class="section">
     <h2>Galería</h2>
-    <img src="images/imagen1.webp" class="img-large" loading="lazy" alt="noticia1">
-    <img src="images/imagen2.webp" class="img-large" loading="lazy" alt="noticia2">
-    <img src="images/imagen3.webp" class="img-large" loading="lazy" alt="noticia3">
+    <img src="images/imagen1_small.webp"
+         srcset="images/imagen1_small.webp 600w, images/imagen1_medium.webp 900w, images/imagen1_large.webp 1200w"
+         sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
+         loading="lazy" class="img-large" alt="noticia1">
+    <img src="images/imagen2_small.webp"
+         srcset="images/imagen2_small.webp 600w, images/imagen2_medium.webp 900w, images/imagen2_large.webp 1200w"
+         sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
+         loading="lazy" class="img-large" alt="noticia2">
+    <img src="images/imagen3_small.webp"
+         srcset="images/imagen3_small.webp 600w, images/imagen3_medium.webp 900w, images/imagen3_large.webp 1200w"
+         sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
+         loading="lazy" class="img-large" alt="noticia3">
   </section>
 
   <section class="section">
-    <div id="result">Proceso no ejecutado para reducir consumo energético</div>
+    <button id="boton">Ejecutar proceso ligero</button>
+    <div id="result"></div>
   </section>
 
   <section class="section">
     <h2>Listados</h2>
-    <ul id="list" class="list"></ul>
+    <ul id="list"></ul>
   </section>
+
 </main>
 
 <script src="script.js" defer></script>
+
 </body>
 </html>
