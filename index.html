@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
   <meta charset="utf-8">
   <title>Noticias</title>
-  <link rel="stylesheet" href="styles.css">
 
-  <!-- No meta description, no viewport -->
   <meta name="description" content="web de noticias">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- mismo CSS, solo minificado -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -19,9 +20,19 @@
 
     <section class="section">
       <h2>Galería</h2>
-      <img src="images/imagen1.webp" class="img-large" loading="lazy" alt="noticia1" width=600 height=400>
-      <img src="images/imagen2.webp" class="img-large" loading="lazy" alt="noticia2" width=600 height=400>
-      <img src="images/imagen3.webp" class="img-large" loading="lazy" alt="noticia3" width=600 height=400>
+
+      <!-- mismas imágenes, mismas dimensiones -->
+      <img src="images/imagen1.webp" class="img-large"
+           loading="lazy" decoding="async"
+           alt="noticia1" width="800" height="600">
+
+      <img src="images/imagen2.webp" class="img-large"
+           loading="lazy" decoding="async"
+           alt="noticia2" width="800" height="600">
+
+      <img src="images/imagen3.webp" class="img-large"
+           loading="lazy" decoding="async"
+           alt="noticia3" width="800" height="600">
     </section>
 
     <section class="section">
@@ -35,7 +46,7 @@
 
   </main>
 
-  <!-- Heavy non-minified blocking script -->
+  <!-- sigue cargando igual -->
   <script src="script.js" defer></script>
 </body>
 </html>
