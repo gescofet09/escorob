@@ -7,46 +7,50 @@
   <meta name="description" content="web de noticias">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- mismo CSS, solo minificado -->
-  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
-  <header class="header">
-    <h1>Noticias</h1>
+<body class="font-sans bg-white text-gray-800 m-0 p-0">
+
+  <header class="h-[300px] flex items-center justify-center text-center bg-sky-50">
+    <h1 class="text-3xl font-bold">Noticias</h1>
   </header>
 
-  <main class="content">
+  <main class="max-w-[1200px] mx-auto">
 
-    <section class="section">
-      <h2>Galería</h2>
+    <section class="p-5 border-b border-gray-300">
+      <h2 class="text-xl font-semibold mb-4">Galería</h2>
 
-      <!-- mismas imágenes, mismas dimensiones -->
-      <img src="images/imagen1.webp" class="img-large"
+      <img src="images/imagen1.webp"
+           class="w-full aspect-video block mb-2.5"
            loading="lazy" decoding="async"
            alt="noticia1" width="800" height="600">
 
-      <img src="images/imagen2.webp" class="img-large"
+      <img src="images/imagen2.webp"
+           class="w-full aspect-video block mb-2.5"
            loading="lazy" decoding="async"
            alt="noticia2" width="800" height="600">
 
-      <img src="images/imagen3.webp" class="img-large"
+      <img src="images/imagen3.webp"
+           class="w-full aspect-video block mb-2.5"
            loading="lazy" decoding="async"
            alt="noticia3" width="800" height="600">
     </section>
 
-    <section class="section">
-      <button id="boton">Ejecutar proceso no pesado</button>
+    <section class="p-5 border-b border-gray-300">
+      <button id="boton"
+              class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition">
+        Ejecutar proceso no pesado
+      </button>
     </section>
 
-    <section class="section">
-      <h2>Listados</h2>
-      <ul id="list"></ul>
+    <section class="p-5 border-b border-gray-300">
+      <h2 class="text-xl font-semibold mb-4">Listados</h2>
+      <ul id="list" class="list-disc pl-5"></ul>
     </section>
 
   </main>
 
-  <!-- sigue cargando igual -->
   <script src="script.js" defer></script>
 </body>
 </html>
