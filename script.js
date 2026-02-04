@@ -12,6 +12,6 @@ boton.addEventListener('click', () => {
 
   list.appendChild(frag);
 
-  // Evita volver a ejecutar el proceso
-  boton.disabled = true;
+  // Elimina el evento para que no vuelva a ejecutarse
+  boton.remove();
 });
